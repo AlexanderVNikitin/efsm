@@ -1,0 +1,53 @@
+vertexes: 1, 2;
+init: 1;
+context_vars: {
+    c_vars.x = 11;
+    c_vars.y = 0;
+};
+edges: [
+  {
+    from: 1;
+    to: 2;
+    input: {"a":1};
+    output: {
+      return (("a", 1),);
+    }
+    predicate: {
+      return 1;
+    }
+    update: {
+      c_vars.x = 11;
+      c_vars.y = 22;
+    }
+  },
+  {
+    from: 1;
+    to: 2;
+    input: {"a":1};
+    output: {
+      return (("a", 1),);
+    }
+    predicate: {
+      return (input.a == 1) or c_vars.y == 1;
+    }
+    update: {
+      c_vars.x = 11;
+      c_vars.y = input.a * 11 / 5;
+    }
+  },
+  {
+    from: 2;
+    to: 3;
+    input: {"b":1, "a": 2};
+    output: {
+      return (("a", 1),);
+    }
+    predicate: {
+      return (input.a == 1) or c_vars.y == 1;
+    }
+    update: {
+      c_vars.x = 12;
+      c_vars.y = c_vars.x;
+    }
+  };
+];

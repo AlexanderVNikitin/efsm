@@ -14,7 +14,7 @@ prompt-toolkit==1.0.15
 psutil==5.4.3
 ptyprocess==0.5.2
 pycallgraph==1.0.1
-Pygments==2.2.0
+Pygments==2.7.4
 pyparsing==2.2.0
 scandir==1.6
 simplegeneric==0.8.1

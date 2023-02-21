@@ -4,7 +4,7 @@ decorator==4.1.2
 enum34==1.1.6
 guppy==0.1.10
 ipdb==0.10.3
-ipython==7.16.3
+ipython==8.10.0
 ipython-genutils==0.2.0
 numpy==1.22.0
 pathlib2==2.3.0
